@@ -1,0 +1,9 @@
+import re
+
+n = int(input())
+
+for i in range(n):
+    
+    x = input()
+    s = re.sub("(?<=\s)&&(?=\s)", "and", x)
+    print(re.sub("(?<=\s)\|\|(?=\s)", "or", s))
