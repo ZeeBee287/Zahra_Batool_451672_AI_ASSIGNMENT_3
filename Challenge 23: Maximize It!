@@ -1,0 +1,19 @@
+from itertools import product
+
+K, M = map(int, input().split())
+
+L = []
+for _ in range(K):
+    X = list(map(int, input().split()))[1:]  
+    L.append(X)
+
+Max_modulus = float('-inf')
+
+for combination in product(*L):
+    S = 0
+    for value in combination:
+        S += value * value
+    Modulus = S % M
+    Max_modulus = max(Max_modulus, Modulus)
+
+print(Max_modulus)
