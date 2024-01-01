@@ -1,5 +1,3 @@
-#Challege 1
-
 def is_leap(year):
     leap = False
     
