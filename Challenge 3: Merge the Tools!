@@ -1,1 +1,14 @@
+def merge_the_tools(string, k):
+    for i in range(0, len(string),k):
+        substring= string[i:i+k]
+        a = ''
+        
+        for char in substring:
+            if char not in a:
+                a += char
+                
+        print(a)
 
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
