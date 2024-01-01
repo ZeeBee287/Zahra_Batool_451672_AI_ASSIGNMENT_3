@@ -1,5 +1,3 @@
-#Challenge 2
-
 def minion_game(string):
     word=len(string)
     K_score= 0
