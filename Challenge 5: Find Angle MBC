@@ -1,0 +1,13 @@
+import math
+
+AB = float(input())
+BC = float(input())
+
+AC = math.sqrt((AB*AB)+(BC*BC))
+BM = 0.5*AC
+MC = BM
+
+theta_radian = math.acos(BC / (2*MC))
+theta_degree = int(round(theta_radian*(180/math.pi)))
+
+print(theta_degree, '\u00B0', sep='')
