@@ -1,0 +1,14 @@
+n=int(input())
+words=[input() for i in range(n)]
+occurences={}
+
+for word in words:
+    occurences[word]=0
+for word in words:
+    occurences[word]+=1
+
+print(len(occurences))
+total_occurences=occurences.values()
+
+for i in total_occurences:
+    print(i, end=" ")
