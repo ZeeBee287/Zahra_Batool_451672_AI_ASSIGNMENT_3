@@ -1,0 +1,11 @@
+from itertools import combinations
+N_length = input()
+N_space = input().split()
+K = int(input())
+
+data = 0
+
+for i in combinations(N_space, K):
+    if 'a' in i:
+        data += 1
+print(data / len(list(combinations(N_space, K))))
