@@ -1,0 +1,22 @@
+T = int(input())
+
+for _ in range(T):
+    n = int(input())
+    cubes = list(map(int, input().split()))
+    result = "Yes"
+    
+    left, right = 0, n - 1
+    
+    while left <= right:
+        top_cube = max(cubes[left], cubes[right])
+        
+        if cubes[left] >= cubes[right]:
+            right -= 1
+        else:
+            left += 1
+        
+        if top_cube < cubes[left] or top_cube < cubes[right]:
+            result = 'No'
+            break
+            
+    print(result)
