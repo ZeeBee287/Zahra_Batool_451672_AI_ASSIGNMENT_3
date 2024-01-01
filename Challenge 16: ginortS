@@ -1,0 +1,9 @@
+s = input()
+
+string_sorted = sorted(s, key=lambda z: (
+    z.isdigit(),
+    int(z) % 2 == 0
+    if z.isdigit()
+    else z.isupper(), z))
+
+print(''.join(string_sorted))
